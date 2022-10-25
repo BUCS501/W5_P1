@@ -6,23 +6,12 @@
     android:rowCount="1"
     android:background="#FF00">
 
-    <EditText
+    <ListView
         android:id="@+id/inputText"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_columnWeight="3"
         android:layout_margin="3dp"
-        android:hint="message to send"
-        android:gravity="center"
-        />
-
-    <Button
-        android:id="@+id/sendBtn"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_columnWeight="1"
-        android:layout_margin="3dp"
-        android:text="send"
-        />
+        android:gravity="center" />
 
 </GridLayout>

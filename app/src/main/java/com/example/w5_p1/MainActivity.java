@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity implements frag_top.Callback
             transaction.commit();
         }
     }
-
-    public void matchWord(String input){
+    
+    public void updateTextView(String input) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         frag_bottom bFragment = (frag_bottom) fragmentManager.findFragmentById(R.id.bottom_frag);
-        bFragment.updateTextView(input);
+        bFragment.updateImage(input);
     }
 }

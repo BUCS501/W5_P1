@@ -25,11 +25,11 @@ public class frag_bottom extends Fragment {
     private frag_top.Callbacks mCallbacks = sDummyCallbacks;
 
     public interface Callbacks{
-        public void matchWord(String input);
+        public void updateTextView(String input);
     }
 
     private static frag_top.Callbacks sDummyCallbacks = new frag_top.Callbacks(){
-        public void matchWord(String input){
+        public void updateTextView(String input){
 
         }
     };
@@ -52,10 +52,12 @@ public class frag_bottom extends Fragment {
         mCallbacks = sDummyCallbacks;
     }
 
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         return inflater.inflate(R.layout.bottom_frag, container, false);
     }
 
+    @Override
     public void onStart() {
         super.onStart();
         View fragment = getView();
@@ -70,9 +72,32 @@ public class frag_bottom extends Fragment {
         currentIndex = 0;
         image.setImageResource(R.drawable.cat);
 
+
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        View fragment = getView();
+        ImageView image = (ImageView) fragment.findViewById(R.id.img);
+        if (currentIndex == 0){
+            image.setImageResource(R.drawable.cat);
+        }
+        if (currentIndex == 1){
+            image.setImageResource(R.drawable.dog);
+        }
+        if (currentIndex == 2){
+            image.setImageResource(R.drawable.tiger);
+        }
+        if (currentIndex == 3){
+            image.setImageResource(R.drawable.lion);
+        }
+        if (currentIndex == 4){
+            image.setImageResource(R.drawable.elephant);
+        }
     }
 
-    public void updateTextView(String input){
+    public void updateImage(String input){
         for (int i=0;i<words.length;i++){
             if (input.toUpperCase().equals(words[i])){
                 currentIndex = i;
