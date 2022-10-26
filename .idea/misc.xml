@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../Library/Android/sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/ahnbh/CS501/Worksheet_apps/Worksheet5/W5_P1/app/src/main/res/layout/activity_main.xml" value="0.129981884057971" />
         <entry key="..\:/Users/ahnbh/CS501/Worksheet_apps/Worksheet5/W5_P1/app/src/main/res/layout/bottom_frag.xml" value="0.129981884057971" />
         <entry key="..\:/Users/ahnbh/CS501/Worksheet_apps/Worksheet5/W5_P1/app/src/main/res/layout/items.xml" value="0.5526041666666667" />
         <entry key="..\:/Users/ahnbh/CS501/Worksheet_apps/Worksheet5/W5_P1/app/src/main/res/layout/top_frag.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24592391304347827" />
+        <entry key="app/src/main/res/layout/bottom_frag.xml" value="0.24592391304347827" />
+        <entry key="app/src/main/res/layout/top_frag.xml" value="0.24592391304347827" />
       </map>
     </option>
   </component>

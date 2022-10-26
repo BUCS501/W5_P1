@@ -79,6 +79,14 @@ public class frag_top extends Fragment implements AdapterView.OnItemClickListene
         ListView listView = (ListView) view.findViewById(R.id.inputText);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,words);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String item = adapterView.getItemAtPosition(i).toString();
+                updateTextView(item);
+            }
+        });
+
     }
 
 //    @Override

@@ -1,20 +1,16 @@
 package com.example.w5_p1;
 
-import android.content.ComponentCallbacks;
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import java.util.*;
-
-import javax.security.auth.callback.Callback;
 
 public class frag_bottom extends Fragment {
 
@@ -102,6 +98,40 @@ public class frag_bottom extends Fragment {
             if (input.toUpperCase().equals(words[i])){
                 currentIndex = i;
             }
+        }
+        View fragment = getView();
+        ImageView image = (ImageView) fragment.findViewById(R.id.img);
+        TextView text = (TextView) fragment.findViewById(R.id.received);
+        MediaPlayer music;
+        if (currentIndex == 0){
+            image.setImageResource(R.drawable.cat);
+            text.setText(words[0]);
+            music = MediaPlayer.create(getContext(), R.raw.cat);
+            music.start();
+        }
+        if (currentIndex == 1){
+            image.setImageResource(R.drawable.dog);
+            text.setText(words[1]);
+            music = MediaPlayer.create(getContext(), R.raw.dog);
+            music.start();
+        }
+        if (currentIndex == 2){
+            image.setImageResource(R.drawable.tiger);
+            text.setText(words[2]);
+            music = MediaPlayer.create(getContext(), R.raw.tiger);
+            music.start();
+        }
+        if (currentIndex == 3){
+            image.setImageResource(R.drawable.lion);
+            text.setText(words[3]);
+            music = MediaPlayer.create(getContext(), R.raw.lion);
+            music.start();
+        }
+        if (currentIndex == 4){
+            image.setImageResource(R.drawable.elephant);
+            text.setText(words[4]);
+            music = MediaPlayer.create(getContext(), R.raw.elephant);
+            music.start();
         }
     }
 }
